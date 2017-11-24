@@ -1,4 +1,4 @@
-FROM ruby:2.3.3
+FROM ruby:2.3
 MAINTAINER easySubsea <contact@easysubsea.com>
 
 EXPOSE 80
