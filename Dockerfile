@@ -1,5 +1,5 @@
-FROM ruby:2.3-slim
-MAINTAINER easySubsea <contact@easysubsea.com>
+FROM ruby:2.3
+MAINTAINER Rhuan Barreto <rhuan@rhuan.com.br>
 
 EXPOSE 80
 
