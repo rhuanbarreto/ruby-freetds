@@ -1,8 +1,17 @@
-FROM ruby:2.3
+FROM ruby:2.3-alpine
 MAINTAINER Rhuan Barreto <rhuan@rhuan.com.br>
 
 EXPOSE 80
 
 # Setup FreeTDS
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs libc6-dev
-RUN wget ftp://ftp.freetds.org/pub/freetds/stable/freetds-1.00.27.tar.gz && tar -xzf freetds-1.00.27.tar.gz && cd freetds-1.00.27 && ./configure --prefix=/usr/local --with-tdsver=7.3 && make && make install
+RUN apk update && apk add --no-cache freetds-dev
+
+# Setup Dependencies
+
+ENV BUILD_PACKAGES="build-base"
+ENV DEV_PACKAGES="libxml2-dev libxslt-dev sqlite-dev nodejs"
+ENV RAILS_DEPS="ca-certificates tzdata"
+
+RUN apk add --no-cache --update --upgrade --virtual .railsdeps \
+		$BUILD_PACKAGES $DEV_PACKAGES \
+	  && rm -rf /var/cache/apk/*
