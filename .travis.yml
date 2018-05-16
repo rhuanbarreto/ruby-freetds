@@ -1,0 +1,2 @@
+sudo: false
+script: "curl -H \"Content-Type: application/json\" --data \'{\"build\": true}\' -X POST https://registry.hub.docker.com/u/rhuan/jenkins-docker/trigger/ead00b6a-96de-495e-9fb2-eb8de5adbc15/"
