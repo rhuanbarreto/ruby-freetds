@@ -3,6 +3,8 @@ A minimal docker container with ruby and FreeTDS for use in many environments.
 
 [![docker](http://dockeri.co/image/rhuan/ruby-freetds "docker")](https://registry.hub.docker.com/u/rhuan/ruby-freetds/)
 
+CI Status: [![Build Status](https://travis-ci.org/rhuanbarreto/ruby-freetds.svg?branch=master)](https://travis-ci.org/rhuanbarreto/ruby-freetds)
+
 # Instructions
 
 The base image is the [official ruby image](https://hub.docker.com/_/ruby/). More information on how to use it you can find on their documentation.
