@@ -15,6 +15,8 @@ All conttributions are welcome! Put a star in the repo and follow up the updates
 
 # Supported tags and respective `Dockerfile` links
 
+- 2.6 (2.6/stretch/Dockerfile)
+- 2.6-slim (2.6/slim/Dockerfile)
 - 2.5 (2.5/stretch/Dockerfile)
 - 2.5-slim (2.5/slim/Dockerfile)
 - 2.4 (2.4/stretch/Dockerfile)
