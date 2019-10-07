@@ -11,3 +11,4 @@ RUN wget ftp://ftp.freetds.org/pub/freetds/stable/freetds-1.00.27.tar.gz && \
 		./configure --prefix=/usr/local --with-tdsver=7.3 && \
 		make && \
 		make install
+RUN gem install bundler
