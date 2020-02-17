@@ -15,3 +15,6 @@ ENV RAILS_DEPS="ca-certificates tzdata"
 RUN apk add --no-cache --update --upgrade --virtual .railsdeps \
 		$BUILD_PACKAGES $DEV_PACKAGES \
 	  && rm -rf /var/cache/apk/*
+
+# Install Latest Bundler
+RUN gem install bundler
