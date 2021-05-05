@@ -1,15 +1,12 @@
-name: Docker Image CI
+name: Trigger Docker CI
 
 on:
   schedule:
   - cron: 0 3 * * *
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - name: Trigger Docker Hub
-      run: curl -X POST --fail https://hub.docker.com/api/build/v1/source/a37d9ef5-b5ca-4848-8f78-f374bc4a7c1b/trigger/aaa9023e-fe0b-4fc8-ab3a-320477aec771/call/
+      run: curl -H "Content-Type: application/json" --data '{"build": true}' -X POST --fail https://hub.docker.com/api/build/v1/source/a37d9ef5-b5ca-4848-8f78-f374bc4a7c1b/trigger/aaa9023e-fe0b-4fc8-ab3a-320477aec771/call/
