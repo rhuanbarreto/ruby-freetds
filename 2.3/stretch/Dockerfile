@@ -1,5 +1,5 @@
 FROM ruby:2.3
-MAINTAINER Rhuan Barreto <rhuan@rhuan.com.br>
+LABEL maintainer="Rhuan Barreto <rhuan@rhuan.com.br>"
 
 # Bring new NODE JS
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -

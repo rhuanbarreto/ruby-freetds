@@ -1,5 +1,5 @@
 FROM ruby:2.3-alpine
-MAINTAINER Rhuan Barreto <rhuan@rhuan.com.br>
+LABEL maintainer="Rhuan Barreto <rhuan@rhuan.com.br>"
 
 # Setup FreeTDS
 RUN apk update && apk add --no-cache freetds-dev
